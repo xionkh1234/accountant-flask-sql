@@ -1,0 +1,14 @@
+-- SQLite
+DELETE FROM Balance_change
+WHERE 1;
+
+DELETE FROM History
+WHERE 1;
+
+DELETE FROM Product_change
+WHERE 1;
+
+DELETE FROM Stock
+WHERE 1;
+
+INSERT OR REPLACE INTO Balance Values (1, 500000);

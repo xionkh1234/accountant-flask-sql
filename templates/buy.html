@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Zakup{% endblock %}
+
+{% block content %}
+<div class="text-large text-bold text-center">Zakup produkt</div>
+<form method="post" id="buy-product-form" class="calculate-sum">
+  <div class="form-group">
+    <label class="form-label" for="input-product-name">Nazwa produktu</label>
+    <input class="form-input" type="text" id="input-product-name" placeholder="Nazwa produktu" name="product-name" required>
+  
+    <label class="form-label" for="input-product-price">Cena jednostkowa</label>
+    <input class="form-input" type="number" id="input-product-price" placeholder="Cena jednostkowa" required>
+  
+    <label class="form-label" for="input-product-qty">Ilość zakupionych</label>
+    <input class="form-input" type="number" id="input-product-qty" placeholder="Ilość zakupionych"  required>
+  
+    <div>
+      Suma: <span id="price-sum">0</span>
+      <button class="btn btn-primary p-centered mt-2">Zakup</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

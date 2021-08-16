@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Start{% endblock %}
+
+{% block content %}
+<div class="text-large text-bold text-center">Stan magazynu</div>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Ilość</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for key in stock %}
+    <tr>
+      <td>{{key}}</td>
+      <td>{{stock[key]}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

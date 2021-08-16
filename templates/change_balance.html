@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Zmień saldo{% endblock %}
+
+{% block content %}
+<div class="text-large text-bold text-center">Zmiana salda</div>
+<form method="post" id="change-balance-form">
+  <div class="form-group">
+    <label class="form-label" for="input-comment">Komentarz</label>
+    <input class="form-input" type="text" id="input-comment" placeholder="Komentarz" name="product-name" required>
+  
+    <label class="form-label" for="input-product-price">Wartość</label>
+    <input class="form-input" type="number" id="input-balance-change" placeholder="Wartość" required>
+    
+    <button class="btn btn-primary p-centered mt-2">Zmień saldo</button>
+  </div>
+</form>
+{% endblock %}

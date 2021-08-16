@@ -1,0 +1,26 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Accountant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+<header class="navbar">
+  <section class="navbar-section">
+    <a href="/" class="navbar-brand mr-2 ml-2 text-bold">ACCOUNTANT</a>
+    <a href="/buy" class="btn btn-link">Zakup</a>
+    <a href="/sell" class="btn btn-link">Sprzedaż</a>
+    <a href="/history" class="btn btn-link">Historia</a>
+    <a href="/change_balance" class="btn btn-link">Zmiana salda</a>
+  </section>
+  <section class="navbar-section">
+    <div class="h5 mr-2">Saldo: <span id="acc-balance"></div>
+  </section>
+</header>
+<div class="divider"></div>
+<div class="container">
+  {% block content %}{% endblock %}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
